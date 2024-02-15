@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital@1&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod {
+    width: 400px;
+    perspective: 600px;
+}
+
+.prod img {
+    width: 100%;
+}
+
+.prod-scene {
+    position: relative;
+    transform: translateZ(-200px) rotateY(10deg);
+    transform-style: preserve-3d;
+    transition: transform 0.35s ease;
+}
+
+.prod-scene:hover{
+    transform: translateZ(-200px) rotateY(80deg);
+}
+
+.prod-left {
+    position: absolute;
+    top: 0;
+    transform: rotateY(-90deg) translateZ(200px);
+
+}
+
+.prod-front {
+    transform: translateZ(200px);
+
+}
+
+.prod-front-data {
+    position: relative;
+}
+
+.prod-front-data h3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.prod-left-data{
+    position: relative;
+}
+
+.prod-front-data h3,
+ .prod-left-data button {
+    position: absolute;
+    bottom: 35px;
+    color: #eee;
+    font-size: 1.75rem;
+    padding: 25px;
+    backdrop-filter: blur(3px);
+    margin: 0;
+
+}
+.prod-left-data button{
+    white-space: nowrap;
+    right: 0;
+    border: none;
+    background-color: rgb(30, 143, 255);
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    cursor: pointer;
+
+    transition:  all 0.25s ease;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0,1);
+    box-shadow: -5px 0 2px 1px  rgba(0, 0, 0, 0.5);
+}
+
+.prod-left-data button:hover{
+    background-color: rgb(66, 117, 168);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0,85);
+    box-shadow: -2 0 2px 5px  rgba(0, 0, 0,85);
+}
+
+.prod-info{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(4, 59, 101, 0.5 );
+}
+
+.prod-info p {
+    font-size: 1.5rem;
+    color: #eee;
+
+    margin-bottom: 2rem;
+}
+
+.prod-info div {
+    font-size: 2rem;
+    color: #eee;
+    display: flex;
+}
+
+.prod-info span{
+    text-align: center;
+    width: 50%;
+}
+
+.prod-info div,
+.prod-left-data button,
+.prod-front-data h3{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-weight: 400;
+}
